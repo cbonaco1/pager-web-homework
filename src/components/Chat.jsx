@@ -1,10 +1,10 @@
 import React from "react";
 import "./Chat.scss";
 
-export default () => {
+export default (props) => {
     return (
         <div className="chat">
-            <p>Chat page</p>
+            <p>Chat page for {props.location.state}</p>
         </div>
     )
 }

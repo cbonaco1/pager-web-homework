@@ -7,12 +7,8 @@ export default () => {
     return (
         <Router>
             <Switch>
-                <Route exact path="/login">
-                    <Login />
-                </Route>
-                <Route exact path="/chat">
-                    <Chat />
-                </Route>
+                <Route exact path="/login" component={Login} />
+                <Route exact path="/chat" component={Chat} />
                 <Redirect path="/" to="/login" />
             </Switch>
         </Router>
