@@ -10,11 +10,19 @@ module.exports = {
                 use: [
                     'babel-loader'
                 ]
+            },
+            {
+                test: /\.scss$/i,
+                use: [
+                    'style-loader',
+                    'css-loader',
+                    'sass-loader'
+                ]
             }
         ]
     },
     resolve: {
-        extensions: ['.js', '.jsx']
+        extensions: ['.js', '.jsx', '.scss']
     },
     output: {
         filename: 'main.js',

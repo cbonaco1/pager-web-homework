@@ -1,7 +1,10 @@
 import React from "react";
+import "./Chat.scss";
 
 export default () => {
     return (
-        <p>Chat page</p>
+        <div className="chat">
+            <p>Chat page</p>
+        </div>
     )
 }

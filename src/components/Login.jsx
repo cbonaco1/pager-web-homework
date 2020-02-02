@@ -1,7 +1,10 @@
 import React from "react";
+import './Login.scss'
 
 export default () => {
     return (
-        <p>Login page</p>
+        <div className="login">
+            <p>Login</p>
+        </div>
     )
 }
