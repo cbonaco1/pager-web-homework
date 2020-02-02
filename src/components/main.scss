@@ -1,0 +1,30 @@
+h1, h2, h3, h4, p, div {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+}
+
+.button, button {
+    color: white;
+    background-color: orange;
+    border: 1px solid orange;
+    padding: 0.5rem 1.5rem;
+    cursor: pointer;
+}
+
+input[type='text'] {
+    width: 100%;
+}
+
+.component {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .component-container {
+        width: 500px;
+        border: 1px solid #ccc;
+    }
+}

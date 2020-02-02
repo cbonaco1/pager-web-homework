@@ -1,3 +1,20 @@
+@import './main';
+
 .login {
-    border: 1px solid blue;
+    .component-container {
+        padding: 32px;
+    }
+    .title {
+        margin-bottom: 2.0rem;
+    }
+    .prompt {
+        margin-bottom: 0.5rem;
+    }
+    #username {
+        margin-bottom: 1.0rem;
+    }
+    .submit-btn {
+        display: block;
+        float: right;
+    }
 }
