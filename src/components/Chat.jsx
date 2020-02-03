@@ -18,8 +18,19 @@ export default class Chat extends React.Component {
     componentDidMount() {
         // if no username, redirect to /login
         this.socket.on('message', (message) => {
+            // Sort messages by date
+            const orderedMessages = [message, ...this.state.messages].sort((m1, m2) => {
+                if (m1.time > m2.time) {
+                    return 1;
+                } else if (m1.time < m2.time) {
+                    return -1;
+                } else {
+                    return 0;
+                }
+            })
+
             this.setState({
-                messages: [message, ...this.state.messages]
+                messages: orderedMessages
             });
         });
     }

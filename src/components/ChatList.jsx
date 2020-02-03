@@ -1,5 +1,6 @@
 // presentational component which renders list of chats
 import React from 'react';
+import { format } from 'date-fns'
 import './ChatList.scss'
 
 export default ({ chats }) => {
@@ -8,7 +9,7 @@ export default ({ chats }) => {
             <li className="chat-list-item" key={index}>
                 <div className="username-time">
                     <p className="username">{username}</p>
-                    <span className="time">{time}</span>
+                    <span className="time">{format(new Date(time), 'p')}</span>
                 </div>
                 <p>{text}</p>
             </li>
