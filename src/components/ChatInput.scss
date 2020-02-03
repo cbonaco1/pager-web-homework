@@ -1,0 +1,15 @@
+.chat-input {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .send-btn {
+        width: 200px;
+    }
+    .send-btn {
+        height: 2rem;
+        font-size: 1rem;
+    }
+    .is-typing {
+        color: #aaa;
+    }
+}

@@ -1,0 +1,20 @@
+.chat-list {
+    height: 500px;
+    overflow-y: scroll;
+    &-item {
+        margin-bottom: 1.5rem;
+        .username-time {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin-bottom: 0.25rem;
+        }
+        .username {
+            font-weight: bold;
+            margin-right: 1rem;
+        }
+        .time {
+            color: #aaa;
+        }
+    }
+}
