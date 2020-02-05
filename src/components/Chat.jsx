@@ -27,7 +27,7 @@ export default class Chat extends React.Component {
                 } else {
                     return 0;
                 }
-            })
+            });
 
             this.setState({
                 messages: orderedMessages
