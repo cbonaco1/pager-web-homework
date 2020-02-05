@@ -15,8 +15,17 @@ export default class Chat extends React.Component {
         }
     }
 
+    componentWillUnmount() {
+        this.socket.off('message');
+    }
+
     componentDidMount() {
+        const {location, history} = this.props;
         // if no username, redirect to /login
+        if (!location.state) {
+            history.push('/login');
+        }
+
         this.socket.on('message', (message) => {
             // Sort messages by date
             const orderedMessages = [message, ...this.state.messages].sort((m1, m2) => {

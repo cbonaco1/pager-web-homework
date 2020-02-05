@@ -10,6 +10,10 @@ export default class ChatInput extends React.Component {
         }
     }
 
+    componentWillUnmount() {
+        this.props.socket.off('is-typing');
+    }
+
     componentDidMount() {
         // listen to "typing" event
         // and filter list of typers
